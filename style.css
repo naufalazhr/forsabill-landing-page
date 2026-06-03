@@ -1,0 +1,659 @@
+/* ============================================
+   FORSABILL Landing Page — Style
+   Formal, Minimalis, Berkelas, Elegan
+   ============================================ */
+
+/* === Reset & Base === */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-red: #c41e3a;
+    --primary-red-dark: #a01830;
+    --primary-yellow: #ffd700;
+    --dark: #1a1a1a;
+    --dark-lighter: #2a2a2a;
+    --white: #ffffff;
+    --light-gray: #f9f9f9;
+    --medium-gray: #6b7280;
+    --border-color: #e5e7eb;
+    --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --max-width: 1200px;
+    --section-padding: 100px 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* === Container === */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* === Navigation === */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+}
+
+.nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+    color: var(--white);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* === Hero Section === */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark);
+    text-align: center;
+    padding: 120px 24px 80px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-logo {
+    width: 200px;
+    height: auto;
+    margin: 0 auto 40px;
+    border-radius: 50%;
+}
+
+.hero-tagline {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--medium-gray);
+    font-weight: 300;
+    margin-bottom: 48px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-cta {
+    display: inline-block;
+    padding: 14px 40px;
+    border: 1px solid var(--primary-red);
+    color: var(--primary-red);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero-cta:hover {
+    background: var(--primary-red);
+    color: var(--white);
+}
+
+/* === Section Common === */
+.section {
+    padding: var(--section-padding);
+}
+
+.section-light {
+    background: var(--white);
+}
+
+.section-alt {
+    background: var(--light-gray);
+}
+
+.section-dark {
+    background: var(--dark);
+    color: var(--white);
+}
+
+.section-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: var(--primary-red);
+}
+
+.section-heading-light {
+    color: var(--white);
+}
+
+/* === Visi & Misi === */
+.visi-block {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.visi-label {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-red);
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.visi-quote {
+    font-family: var(--font-heading);
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-style: italic;
+    color: var(--dark);
+    line-height: 1.8;
+    border-left: 3px solid var(--primary-red);
+    padding-left: 24px;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.misi-block {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.misi-label {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-red);
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.misi-list {
+    list-style: none;
+    counter-reset: misi-counter;
+}
+
+.misi-list li {
+    counter-increment: misi-counter;
+    padding: 20px 0 20px 60px;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--medium-gray);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.misi-list li:last-child {
+    border-bottom: none;
+}
+
+.misi-list li::before {
+    content: counter(misi-counter, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 20px;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-red);
+}
+
+/* === Arti Lambang === */
+.lambang-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.lambang-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 100px;
+}
+
+.lambang-image img {
+    width: 280px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.lambang-details {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.lambang-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.lambang-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 1.25rem;
+}
+
+.lambang-item h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--dark);
+}
+
+.lambang-item p {
+    font-size: 0.9rem;
+    color: var(--medium-gray);
+    line-height: 1.6;
+}
+
+/* === Struktur Organisasi === */
+.struktur-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.struktur-card {
+    width: 100%;
+    padding: 24px 32px;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.struktur-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.struktur-ketua {
+    border-color: var(--primary-red);
+    border-width: 2px;
+}
+
+.struktur-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-red);
+    margin-bottom: 8px;
+}
+
+.struktur-name {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.struktur-count {
+    font-size: 1rem;
+    color: var(--medium-gray);
+    font-weight: 500;
+}
+
+.struktur-level {
+    width: 80%;
+}
+
+.struktur-dewan {
+    width: 100%;
+}
+
+.struktur-bidang {
+    width: 100%;
+}
+
+/* === Legalitas === */
+.legalitas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.legalitas-card {
+    padding: 32px 24px;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.legalitas-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.legalitas-icon {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+}
+
+.legalitas-card h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--medium-gray);
+    margin-bottom: 8px;
+}
+
+.legalitas-value {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.4;
+}
+
+/* === Kontak === */
+.kontak-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.kontak-item {
+    margin-bottom: 40px;
+}
+
+.kontak-item:last-child {
+    margin-bottom: 0;
+}
+
+.kontak-item h4 {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-red);
+    margin-bottom: 12px;
+}
+
+.kontak-item p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.kontak-item a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.kontak-item a:hover {
+    color: var(--primary-red);
+}
+
+.kontak-map {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.kontak-map iframe {
+    display: block;
+    border-radius: 12px;
+}
+
+/* === Footer === */
+.footer {
+    background: #111111;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-quote {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 1px;
+}
+
+/* === Animations === */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+    .lambang-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .lambang-image {
+        position: static;
+    }
+
+    .lambang-image img {
+        width: 200px;
+    }
+
+    .legalitas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 60px 0;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(26, 26, 26, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        gap: 24px;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .hero-logo {
+        width: 150px;
+    }
+
+    .kontak-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .struktur-level {
+        width: 100%;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-tagline {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.875rem;
+    }
+
+    .visi-quote {
+        font-size: 1rem;
+    }
+
+    .misi-list li {
+        padding-left: 48px;
+    }
+
+    .misi-list li::before {
+        font-size: 1.25rem;
+    }
+}
