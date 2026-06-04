@@ -119,10 +119,9 @@ a {
 
 .nav-logo-img {
     width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+    height: auto;
     border: 1px solid var(--border-light);
+    border-radius: 8px;
 }
 
 .nav-menu {
@@ -224,9 +223,9 @@ a {
 
 .hero-logo {
     width: 160px;
-    height: 160px;
-    border-radius: 50%;
+    height: auto;
     border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
     padding: 8px;
     background: rgba(255, 255, 255, 0.05);
     margin: 0 auto 32px;
@@ -467,9 +466,9 @@ a {
 
 .lambang-image img {
     width: 280px;
-    height: 280px;
-    border-radius: 50%;
+    height: auto;
     border: 1px solid var(--border-light);
+    border-radius: 16px;
     padding: 24px;
     background: var(--bg-light);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
@@ -743,7 +742,7 @@ a {
     }
     .lambang-image img {
         width: 220px;
-        height: 220px;
+        height: auto;
     }
     .kontak-grid {
         grid-template-columns: 1fr;
@@ -796,7 +795,7 @@ a {
 
     .hero-logo {
         width: 120px;
-        height: 120px;
+        height: auto;
     }
     
     .section-heading {
